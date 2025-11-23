@@ -4,9 +4,9 @@ import { SuiClient } from '@mysten/sui/client';
 // 这里提供一个基础实现，后续可以替换为真实的 Seal 库
 
 export class SealService {
-  private suiClient: SuiClient;
+  private suiClient: any; // 使用 any 类型来避免类型冲突
 
-  constructor(suiClient: SuiClient) {
+  constructor(suiClient: any) {
     this.suiClient = suiClient;
   }
 

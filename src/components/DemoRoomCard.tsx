@@ -199,7 +199,9 @@ export const DemoRoomCard: React.FC<DemoRoomCardProps> = ({
                   <span className="text-lg">{player.avatar}</span>
                   <span className="font-medium">{player.name}</span>
                   {player.encryptedChoice && (
-                    <Shield className="w-3 h-3 text-green-500" title="已加密" />
+                    <div className="w-3 h-3 text-green-500" title="已加密">
+                      <Shield className="w-3 h-3" />
+                    </div>
                   )}
                 </div>
                 {player.revealedChoice && room.status === 'revealed' && (
